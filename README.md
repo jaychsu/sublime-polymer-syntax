@@ -1,4 +1,4 @@
-sublime-polymer-highlight
+sublime-polymer-syntax
 ======
 
 Sublime-Text syntax highlighting for 
@@ -12,18 +12,18 @@ and
 
     1. Press <kbd>⌘P</kbd> / <kbd>Ctrl+P</kbd>
     2. Choose `Package Controll: Install Package`
-    3. Type `Sublime Polymer Highlight`
+    3. Type `Sublime Polymer Syntax`
 
 - by manual: 
 
     ```shell
     mkdir -p ~/Library/Application Support/Sublime Text 3/Packages && cd $_
-    git clone https://github.com/jaychsu/sublime-polymer-highlight.git
+    git clone https://github.com/jaychsu/sublime-polymer-syntax.git
     ```
 
 ## Thank
 
-`sublime-polymer-highlight` is adapted from 
+`sublime-polymer-syntax` is adapted from 
 [HTML.sublime-syntax](https://github.com/sublimehq/Packages/blob/master/HTML/HTML.sublime-syntax) 
 and inspired by the following projects:
 
