@@ -9,8 +9,8 @@ contexts:
   main:
     - match: (<\?)(xml)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.xml.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.xml.html
       push:
         - meta_scope: meta.tag.preprocessor.xml.html
         - match: '\?>'
@@ -51,8 +51,8 @@ contexts:
           scope: invalid.illegal.bad-comments-or-CDATA.html
     - match: (</?)([a-z_][a-z0-9:_]*-[a-z0-9:_-]+)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.custom.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.custom.html
       push:
         - meta_scope: meta.tag.custom.html
         - match: '(?: ?/)?>'
@@ -61,16 +61,16 @@ contexts:
         - include: tag-stuff
     - match: '(?:^\s+)?(<)((?i:style))\b(?![^>]*/>)'
       captures:
-        0: meta.tag.style.begin.html
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.style.html
+        '0': meta.tag.style.begin.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.style.html
       push:
         - match: (?i)(</)(style)(>)
           captures:
-            0: meta.tag.style.end.html
-            1: punctuation.definition.tag.begin.html
-            2: entity.name.tag.style.html
-            3: punctuation.definition.tag.end.html
+            '0': meta.tag.style.end.html
+            '1': punctuation.definition.tag.begin.html
+            '2': entity.name.tag.style.html
+            '3': punctuation.definition.tag.end.html
           pop: true
         - match: '>'
           scope: meta.tag.style.begin.html punctuation.definition.tag.end.html
@@ -88,22 +88,22 @@ contexts:
             - include: tag-stuff
     - match: '(<)((?i:script))\b(?![^>]*/>)(?![^>]*(?i:type.?=.?text/((?!javascript).*)))'
       captures:
-        0: meta.tag.script.begin.html
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.script.html
+        '0': meta.tag.script.begin.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.script.html
       push:
         - match: (?i)(-->)?\s*(</)(script)(>)
           captures:
-            0: meta.tag.script.end.html
-            1: comment.block.html punctuation.definition.comment.html
-            2: punctuation.definition.tag.begin.html
-            3: entity.name.tag.script.html
-            4: punctuation.definition.tag.end.html
+            '0': meta.tag.script.end.html
+            '1': comment.block.html punctuation.definition.comment.html
+            '2': punctuation.definition.tag.begin.html
+            '3': entity.name.tag.script.html
+            '4': punctuation.definition.tag.end.html
           pop: true
         - match: '(>)\s*(<!--)?'
           captures:
-            1: meta.tag.script.begin.html punctuation.definition.tag.end.html
-            2: comment.block.html punctuation.definition.comment.html
+            '1': meta.tag.script.begin.html punctuation.definition.tag.end.html
+            '2': comment.block.html punctuation.definition.comment.html
           push:
             - meta_content_scope: source.js.embedded.html
             - include: 'scope:source.js'
@@ -118,8 +118,8 @@ contexts:
             - include: tag-stuff
     - match: (</?)((?i:body|head|html)\b)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.structure.any.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.structure.any.html
       push:
         - meta_scope: meta.tag.structure.any.html
         - match: '>'
@@ -128,8 +128,8 @@ contexts:
         - include: tag-stuff
     - match: (</?)((?i:address|blockquote|dd|div|section|article|aside|header|footer|nav|menu|dl|dt|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|object|ol|p|ul|applet|center|dir|pre)\b)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.block.any.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.block.any.html
       push:
         - meta_scope: meta.tag.block.any.html
         - match: '>'
@@ -138,8 +138,8 @@ contexts:
         - include: tag-stuff
     - match: (</?)((?i:hr)\b)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.block.any.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.block.any.html
       push:
         - meta_scope: meta.tag.block.any.html
         - match: '(?: ?/)?>'
@@ -148,8 +148,8 @@ contexts:
         - include: tag-stuff
     - match: (</?)((?i:form|fieldset)\b)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.block.form.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.block.form.html
       push:
         - meta_scope: meta.tag.block.form.html
         - match: '>'
@@ -158,8 +158,8 @@ contexts:
         - include: tag-stuff
     - match: (</?)((?i:abbr|acronym|area|b|base|basefont|bdo|big|br|caption|cite|code|del|dfn|em|font|head|html|i|img|ins|isindex|kbd|li|link|map|meta|noscript|param|q|s|samp|script|small|span|strike|strong|style|sub|sup|title|tt|u|var)\b)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.inline.any.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.inline.any.html
       push:
         - meta_scope: meta.tag.inline.any.html
         - match: '(?: ?/)?>'
@@ -168,8 +168,8 @@ contexts:
         - include: tag-stuff
     - match: (</?)((?i:button|input|label|legend|optgroup|option|select|textarea)\b)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.inline.form.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.inline.form.html
       push:
         - meta_scope: meta.tag.inline.form.html
         - match: '(?: ?/)?>'
@@ -178,8 +178,8 @@ contexts:
         - include: tag-stuff
     - match: (</?)((?i:a)\b)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.inline.a.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.inline.a.html
       push:
         - meta_scope: meta.tag.inline.a.html
         - match: '(?: ?/)?>'
@@ -188,8 +188,8 @@ contexts:
         - include: tag-stuff
     - match: (</?)((?i:col|colgroup|table|tbody|td|tfoot|th|thead|tr)\b)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.inline.table.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.inline.table.html
       push:
         - meta_scope: meta.tag.inline.table.html
         - match: '(?: ?/)?>'
@@ -198,8 +198,8 @@ contexts:
         - include: tag-stuff
     - match: (</?)([A-Za-z0-9:_]+-[A-Za-z0-9:_-]+)
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: invalid.illegal.uppercase-custom-tag-name.html
+        '1': punctuation.definition.tag.begin.html
+        '2': invalid.illegal.uppercase-custom-tag-name.html
       push:
         - meta_scope: meta.tag.custom.html
         - match: '(?: ?/)?>'
@@ -208,8 +208,8 @@ contexts:
         - include: tag-stuff
     - match: "(</?)([a-zA-Z0-9:]+)"
       captures:
-        1: punctuation.definition.tag.begin.html
-        2: entity.name.tag.other.html
+        '1': punctuation.definition.tag.begin.html
+        '2': entity.name.tag.other.html
       push:
         - meta_scope: meta.tag.other.html
         - match: '(?: ?/)?>'
@@ -224,12 +224,12 @@ contexts:
     - match: "(&)([a-zA-Z0-9]+|#[0-9]+|#x[0-9a-fA-F]+)(;)"
       scope: constant.character.entity.html
       captures:
-        1: punctuation.definition.entity.html
-        3: punctuation.definition.entity.html
+        '1': punctuation.definition.entity.html
+        '3': punctuation.definition.entity.html
   entities-meta:
     - match: "{{"
       captures:
-        1: punctuation.definition.tag.begin
+        '1': punctuation.definition.tag.begin
       scope: meta.block.js punctuation.definition.block.js
       push:
         - meta_content_scope: source.js.embedded.html
@@ -242,7 +242,7 @@ contexts:
           scope: invalid.illegal
     - match: \[\[
       captures:
-        1: punctuation.definition.tag.begin
+        '1': punctuation.definition.tag.begin
       scope: meta.block.js punctuation.definition.block.js
       push:
         - meta_content_scope: source.js.embedded.html
@@ -278,13 +278,12 @@ contexts:
           scope: punctuation.definition.string.end.html
           pop: true
         - include: entities
-
   tag-generic-attribute:
     - match: '(?:^|\s+)(([a-zA-Z0-9:\-_.]+)\s*(\$?=)\s*)'
       captures:
-        1: meta.attribute-with-value.html
-        2: entity.other.attribute-name.html
-        3: punctuation.separator.key-value.html
+        '1': meta.attribute-with-value.html
+        '2': entity.other.attribute-name.html
+        '3': punctuation.separator.key-value.html
       push:
         - include: entities-meta
         - match: '"'
@@ -309,14 +308,13 @@ contexts:
           pop: true
     - match: '\s+([a-zA-Z0-9:\-_.]+)'
       captures:
-        1: entity.other.attribute-name.html
-
+        '1': entity.other.attribute-name.html
   tag-class-attribute:
     - match: '(?:^|\s+)\b((class)\b\s*(\$?=)\s*)'
       captures:
-        1: meta.attribute-with-value.class.html
-        2: entity.other.attribute-name.class.html
-        3: punctuation.separator.key-value.html
+        '1': meta.attribute-with-value.class.html
+        '2': entity.other.attribute-name.class.html
+        '3': punctuation.separator.key-value.html
       push:
         - match: '"'
           scope: punctuation.definition.string.begin.html
@@ -340,13 +338,12 @@ contexts:
           scope: meta.attribute-with-value.class.html string.unquoted.html meta.class-name.html
         - match: ''
           pop: true
-
   tag-id-attribute:
     - match: '(?:^|\s+)\b((id)\b\s*(\$?=)\s*)'
       captures:
-        1: meta.attribute-with-value.id.html
-        2: entity.other.attribute-name.id.html
-        3: punctuation.separator.key-value.html
+        '1': meta.attribute-with-value.id.html
+        '2': entity.other.attribute-name.id.html
+        '3': punctuation.separator.key-value.html
       push:
         - match: '"'
           scope: punctuation.definition.string.begin.html
@@ -370,13 +367,12 @@ contexts:
           scope: meta.attribute-with-value.id.html string.unquoted.html meta.toc-list.id.html
         - match: ''
           pop: true
-
   tag-style-attribute:
     - match: '(?:^|\s+)\b((style)\b\s*(\$?=)\s*)'
       captures:
-        1: meta.attribute-with-value.style.html
-        2: entity.other.attribute-name.style.html
-        3: punctuation.separator.key-value.html
+        '1': meta.attribute-with-value.style.html
+        '2': entity.other.attribute-name.style.html
+        '3': punctuation.separator.key-value.html
       push:
         - match: '"'
           scope: string.quoted.double punctuation.definition.string.begin.html
@@ -418,7 +414,6 @@ contexts:
                 - include: attribute-entities
         - match: ''
           pop: true
-
   tag-event-attribute:
     - match: |-
         (?x)\s*\b((
@@ -433,9 +428,9 @@ contexts:
         onseeking|onselect|onshow|onsort|onstalled|onsubmit|onsuspend|
         ontimeupdate|ontoggle|onvolumechange|onwaiting)\b\s*(\$?=)\s*)
       captures:
-        1: meta.attribute-with-value.event.html
-        2: entity.other.attribute-name.event.html
-        3: punctuation.separator.key-value.html
+        '1': meta.attribute-with-value.event.html
+        '2': entity.other.attribute-name.event.html
+        '3': punctuation.separator.key-value.html
       push:
         - match: '"'
           scope: string.quoted.double punctuation.definition.string.begin.html
@@ -465,7 +460,6 @@ contexts:
                 - include: attribute-entities
         - match: ''
           pop: true
-
   tag-stuff:
     - include: tag-id-attribute
     - include: tag-class-attribute
