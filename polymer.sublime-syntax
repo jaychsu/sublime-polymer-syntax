@@ -217,6 +217,7 @@ contexts:
           pop: true
         - include: tag-stuff
     - include: entities
+    - include: entities-meta
     - match: <>
       scope: invalid.illegal.incomplete.html
   entities-common:
@@ -225,8 +226,36 @@ contexts:
       captures:
         1: punctuation.definition.entity.html
         3: punctuation.definition.entity.html
+  entities-meta:
+    - match: "{{"
+      captures:
+        1: punctuation.definition.tag.begin
+      scope: meta.block.js punctuation.definition.block.js
+      push:
+        - meta_content_scope: source.js.embedded.html
+        - include: 'scope:source.js'
+        - match: "}}"
+          scope: punctuation.definition.tag.end
+          pop: true
+      with_prototype:
+        - match: "//"
+          scope: invalid.illegal
+    - match: \[\[
+      captures:
+        1: punctuation.definition.tag.begin
+      scope: meta.block.js punctuation.definition.block.js
+      push:
+        - meta_content_scope: source.js.embedded.html
+        - include: 'scope:source.js'
+        - match: \]\]
+          scope: punctuation.definition.tag.end
+          pop: true
+      with_prototype:
+        - match: "//"
+          scope: invalid.illegal
   attribute-entities:
     - include: entities-common
+    - include: entities-meta
   entities:
     - include: entities-common
     - match: "&"
@@ -257,6 +286,7 @@ contexts:
         2: entity.other.attribute-name.html
         3: punctuation.separator.key-value.html
       push:
+        - include: entities-meta
         - match: '"'
           scope: punctuation.definition.string.begin.html
           set:
