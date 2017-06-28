@@ -1,6 +1,11 @@
 sublime-polymer-syntax
 ======
 
+[![GitHub release](https://img.shields.io/github/release/jaychsu/sublime-polymer-syntax.svg)](https://github.com/jaychsu/sublime-polymer-syntax/releases)
+[![Package Control](https://img.shields.io/packagecontrol/dd/PolymerSyntax.svg)](https://packagecontrol.io/packages/PolymerSyntax)
+[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/jaychsu/sublime-polymer-syntax)
+[![license](https://img.shields.io/github/license/jaychsu/sublime-polymer-syntax.svg)](https://github.com/jaychsu/sublime-polymer-syntax/blob/master/LICENSE)
+
 Sublime-Text syntax highlighting for 
 [Polymer](https://www.polymer-project.org/)
 and
@@ -12,7 +17,7 @@ and
 
     1. Press <kbd>⌘P</kbd> / <kbd>Ctrl+P</kbd>
     2. Choose `Package Controll: Install Package`
-    3. Type `Sublime Polymer Syntax`
+    3. Type `Polymer Syntax`
 
 - by manual: 
 
