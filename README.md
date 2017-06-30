@@ -2,7 +2,7 @@ sublime-polymer-syntax
 ======
 
 [![GitHub release](https://img.shields.io/github/release/jaychsu/sublime-polymer-syntax.svg)](https://github.com/jaychsu/sublime-polymer-syntax/releases)
-[![Package Control](https://img.shields.io/packagecontrol/dd/PolymerSyntax.svg)](https://packagecontrol.io/packages/PolymerSyntax)
+[![Package Control](https://img.shields.io/packagecontrol/dm/Polymer%20Syntax.svg)](https://packagecontrol.io/packages/Polymer%20Syntax)
 [![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/jaychsu/sublime-polymer-syntax)
 [![license](https://img.shields.io/github/license/jaychsu/sublime-polymer-syntax.svg)](https://github.com/jaychsu/sublime-polymer-syntax/blob/master/LICENSE)
 
