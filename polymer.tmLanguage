@@ -403,16 +403,7 @@
 						<key>match</key>
 						<string>(&gt;)\s*(&lt;!--)?</string>
 						<key>push</key>
-						<array>
-							<dict>
-								<key>meta_content_scope</key>
-								<string>source.js.embedded.html</string>
-							</dict>
-							<dict>
-								<key>include</key>
-								<string>scope:source.js</string>
-							</dict>
-						</array>
+						<string>scope:source.js</string>
 						<key>with_prototype</key>
 						<array>
 							<dict>
@@ -575,7 +566,7 @@
 					<string>entity.name.tag.inline.any.html</string>
 				</dict>
 				<key>match</key>
-				<string>(&lt;/?)((?i:abbr|acronym|area|b|base|basefont|bdo|big|br|caption|cite|code|del|dfn|em|font|head|html|i|img|ins|isindex|kbd|li|link|map|meta|noscript|param|q|s|samp|script|small|span|strike|strong|style|sub|sup|title|tt|u|var)\b)</string>
+				<string>(&lt;/?)((?i:abbr|acronym|area|b|base|basefont|bdo|big|br|caption|cite|code|del|dfn|em|font|head|html|i|img|ins|isindex|kbd|li|link|map|meta|noscript|param|q|s|samp|small|span|strike|strong|sub|sup|title|tt|u|var)\b)</string>
 				<key>push</key>
 				<array>
 					<dict>
@@ -919,17 +910,17 @@
 					<string>punctuation.separator.key-value.html</string>
 				</dict>
 				<key>match</key>
-				<string>(?x)\s*\b((
-onabort|onautocomplete|onautocompleteerror|onblur|oncancel|oncanplay|
-oncanplaythrough|onchange|onclick|onclose|oncontextmenu|oncuechange|
-ondblclick|ondrag|ondragend|ondragenter|ondragexit|ondragleave|ondragover|
-ondragstart|ondrop|ondurationchange|onemptied|onended|onerror|onfocus|
-oninput|oninvalid|onkeydown|onkeypress|onkeyup|onload|onloadeddata|
-onloadedmetadata|onloadstart|onmousedown|onmouseenter|onmouseleave|
-onmousemove|onmouseout|onmouseover|onmouseup|onmousewheel|onpause|onplay|
-onplaying|onprogress|onratechange|onreset|onresize|onscroll|onseeked|
-onseeking|onselect|onshow|onsort|onstalled|onsubmit|onsuspend|
-ontimeupdate|ontoggle|onvolumechange|onwaiting)\b\s*(\$?=)\s*)</string>
+				<string>(?xi)\s*\b((
+on-?abort|on-?autocomplete|on-?autocompleteerror|on-?blur|on-?cancel|on-?canplay|
+on-?canplaythrough|on-?change|on-?click|on-?close|on-?contextmenu|on-?cuechange|
+on-?dblclick|on-?drag|on-?dragend|on-?dragenter|on-?dragexit|on-?dragleave|on-?dragover|
+on-?dragstart|on-?drop|on-?durationchange|on-?emptied|on-?ended|on-?error|on-?focus|
+on-?input|on-?invalid|on-?keydown|on-?keypress|on-?keyup|on-?load|on-?loadeddata|
+on-?loadedmetadata|on-?loadstart|on-?mousedown|on-?mouseenter|on-?mouseleave|
+on-?mousemove|on-?mouseout|on-?mouseover|on-?mouseup|on-?mousewheel|on-?pause|on-?play|
+on-?playing|on-?progress|on-?ratechange|on-?reset|on-?resize|on-?scroll|on-?seeked|
+on-?seeking|on-?select|on-?show|on-?sort|on-?stalled|on-?submit|on-?suspend|
+on-?timeupdate|on-?toggle|on-?volumechange|on-?waiting)\b\s*(\$?=)\s*)</string>
 				<key>push</key>
 				<array>
 					<dict>
@@ -1357,7 +1348,7 @@ ontimeupdate|ontoggle|onvolumechange|onwaiting)\b\s*(\$?=)\s*)</string>
 		<string>htm</string>
 	</array>
 	<key>name</key>
-	<string>Web Component</string>
+	<string>Polymer</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 </dict>

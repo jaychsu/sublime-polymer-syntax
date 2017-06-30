@@ -11,6 +11,8 @@ Sublime-Text syntax highlighting for
 and
 [Web Component](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
+![Polymer Syntax](https://user-images.githubusercontent.com/6890034/27731712-c86a2dfc-5dc0-11e7-9a7d-93b7f8f0f9e3.png)
+
 ## Install
 
 - via [Package Control](https://packagecontrol.io/installation): 
@@ -25,6 +27,10 @@ and
     mkdir -p ~/Library/Application Support/Sublime Text 3/Packages && cd $_
     git clone https://github.com/jaychsu/sublime-polymer-syntax.git
     ```
+
+## Todos
+
+- [ ] Add [test](./syntax_test_polymer.html)
 
 ## Thank
 
