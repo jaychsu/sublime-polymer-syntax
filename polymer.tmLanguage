@@ -47,11 +47,6 @@
 		<key>entities-meta</key>
 		<array>
 			<dict>
-				<key>captures</key>
-				<dict>
-					<key>1</key>
-					<string>punctuation.definition.tag.begin</string>
-				</dict>
 				<key>match</key>
 				<string>{{</string>
 				<key>push</key>
@@ -70,11 +65,11 @@
 						<key>pop</key>
 						<true/>
 						<key>scope</key>
-						<string>punctuation.definition.tag.end</string>
+						<string>keyword.other.substitution.end.js</string>
 					</dict>
 				</array>
 				<key>scope</key>
-				<string>meta.block.js punctuation.definition.block.js</string>
+				<string>keyword.other.substitution.begin.js</string>
 				<key>with_prototype</key>
 				<array>
 					<dict>
@@ -86,11 +81,6 @@
 				</array>
 			</dict>
 			<dict>
-				<key>captures</key>
-				<dict>
-					<key>1</key>
-					<string>punctuation.definition.tag.begin</string>
-				</dict>
 				<key>match</key>
 				<string>\[\[</string>
 				<key>push</key>
@@ -109,11 +99,11 @@
 						<key>pop</key>
 						<true/>
 						<key>scope</key>
-						<string>punctuation.definition.tag.end</string>
+						<string>keyword.other.substitution.end.js</string>
 					</dict>
 				</array>
 				<key>scope</key>
-				<string>meta.block.js punctuation.definition.block.js</string>
+				<string>keyword.other.substitution.begin.js</string>
 				<key>with_prototype</key>
 				<array>
 					<dict>

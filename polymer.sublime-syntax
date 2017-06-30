@@ -228,27 +228,23 @@ contexts:
         '3': punctuation.definition.entity.html
   entities-meta:
     - match: "{{"
-      captures:
-        '1': punctuation.definition.tag.begin
-      scope: meta.block.js punctuation.definition.block.js
+      scope: keyword.other.substitution.begin.js
       push:
         - meta_content_scope: source.js.embedded.html
         - include: 'scope:source.js'
         - match: "}}"
-          scope: punctuation.definition.tag.end
+          scope: keyword.other.substitution.end.js
           pop: true
       with_prototype:
         - match: "//"
           scope: invalid.illegal
     - match: \[\[
-      captures:
-        '1': punctuation.definition.tag.begin
-      scope: meta.block.js punctuation.definition.block.js
+      scope: keyword.other.substitution.begin.js
       push:
         - meta_content_scope: source.js.embedded.html
         - include: 'scope:source.js'
         - match: \]\]
-          scope: punctuation.definition.tag.end
+          scope: keyword.other.substitution.end.js
           pop: true
       with_prototype:
         - match: "//"
