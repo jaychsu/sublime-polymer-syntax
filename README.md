@@ -17,7 +17,7 @@ and
 
 - via [Package Control](https://packagecontrol.io/installation): 
 
-    1. Press <kbd>⌘P</kbd> / <kbd>Ctrl+P</kbd>
+    1. Press <kbd>CMD⌘</kbd> <kbd>SHIFT</kbd> <kbd>P</kbd> (macOS) or <kbd>CTRL</kbd> <kbd>SHIFT</kbd> <kbd>P</kbd> (Win)
     2. Choose `Package Controll: Install Package`
     3. Type `Polymer Syntax`
 
