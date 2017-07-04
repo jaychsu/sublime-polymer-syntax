@@ -28,10 +28,6 @@ and
     git clone https://github.com/jaychsu/sublime-polymer-syntax.git
     ```
 
-## Todos
-
-- [ ] Add [test](./syntax_test_polymer.html)
-
 ## Thank
 
 `sublime-polymer-syntax` is adapted from 
